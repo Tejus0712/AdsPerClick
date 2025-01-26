@@ -1,0 +1,42 @@
+.get-in-touch-btn {
+  background-color: #fe3e6b; /* Bold color */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.get-in-touch-btn:hover {
+  background-color: #fe3e6b; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly larger on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.get-in-touch-btn:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.5); /* Focus effect */
+}
+
+/* Vibration Animation */
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.vibrate {
+  animation: vibrate 0.5s ease infinite;
+}

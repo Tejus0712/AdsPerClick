@@ -1,0 +1,20 @@
+.text-primary {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-primary::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjusts the distance of the underline from the text */
+    left: 0;
+    width: 0;
+    height: 2px; /* Line thickness */
+    background-color: #ffcc00; /* Adjust underline color */
+    transition: width 0.4s ease;
+  }
+  
+  .text-primary:hover::after {
+    width: 100%;
+  }
+  
