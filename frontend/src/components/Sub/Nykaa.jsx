@@ -1,5 +1,5 @@
 import React from "react";
-import nykaa from "../../assets/sub/nykaa.png";
+import nykaa from "../../assets/sub/Nykaa.png";
 
 const Nykaa = () => {
   return (

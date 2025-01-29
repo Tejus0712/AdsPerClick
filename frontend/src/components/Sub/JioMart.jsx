@@ -1,5 +1,5 @@
 import React from "react";
-import jioMart from "../../assets/sub/jioMart.png";
+import jioMart from "../../assets/sub/JioMart.png";
 
 const JioMart = () => {
   return (

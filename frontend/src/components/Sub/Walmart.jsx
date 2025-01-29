@@ -1,5 +1,5 @@
 import React from "react";
-import walmart from "../../assets/sub/walmart.png";
+import walmart from "../../assets/sub/Walmart.png";
 
 const Walmart = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import etsy from "../../assets/sub/etsy.png";
+import etsy from "../../assets/sub/Etsy.png";
 
 const Etsy = () => {
   return (
