@@ -1,6 +1,6 @@
 import React from "react";
 import yellowCar from "../../assets/website/team.png";
-import "./hero.css"
+import "./Hero.css"
 const Hero = () => {
   return (
     <div className="dark:bg-gray-950 dark:text-white duration-300">
