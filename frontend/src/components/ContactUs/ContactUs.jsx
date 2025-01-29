@@ -62,7 +62,7 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post("http://localhost:3001/send-email", formData);
+      const response = await axios.post("https://adsperclick.onrender.com/send-email", formData);
       console.log("Form submitted successfully", response.data);
       alert("Thank you for contacting.");
       setFormData({
