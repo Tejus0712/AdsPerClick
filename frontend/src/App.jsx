@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
         {/* Navbar and other global components */}
         <Navbar />
