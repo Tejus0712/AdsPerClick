@@ -5,7 +5,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    address: "",
+    city: "",
     email: "",
     subject: "",
     message: "",
@@ -34,12 +34,12 @@ const ContactUs = () => {
       newErrors.phone = "Phone number must be 10 digits";
     }
 
-    if (!formData.address.trim()) newErrors.address = "Address is required";
+    if (!formData.city.trim()) newErrors.city = "city is required";
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(formData.email)) {
-      newErrors.email = "Enter a valid email address";
+      newErrors.email = "Enter a valid email city";
     }
 
     if (!formData.subject.trim()) newErrors.subject = "Subject is required";
@@ -68,7 +68,7 @@ const ContactUs = () => {
       setFormData({
         name: "",
         phone: "",
-        address: "",
+        city: "",
         email: "",
         subject: "",
         message: "",
@@ -152,20 +152,20 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="flex w-full gap-2">
-              {/* Address Field */}
+              {/* city Field */}
               <div className="flex-1">
-                {/* <label htmlFor="address" className="block text-sm font-medium mb-1">
-                  Address
+                {/* <label htmlFor="city" className="block text-sm font-medium mb-1">
+                  city
                 </label> */}
                 <input
                   type="text"
-                  id="address"
-                  name="address"
-                  value={formData.address}
+                  id="city"
+                  name="city"
+                  value={formData.city}
                   onChange={handleChange}
-                  placeholder="Enter your address"
+                  placeholder="Enter your city"
                   className="w-full  bg-opacity-40 bg-white placeholder:text-white border-gray-300 rounded-2xl focus:bg-white  focus:ring-primary focus:border-primary p-3 shadow-md"                />
-                {errors.address && <p className="text-red-500 text-sm">{errors.address}</p>}
+                {errors.city && <p className="text-red-500 text-sm">{errors.city}</p>}
               </div>
 
               {/* Email Field */}
