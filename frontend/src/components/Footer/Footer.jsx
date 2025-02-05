@@ -1,48 +1,46 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {Link} from "react-router-dom"
 
 const FooterLinks = [
   {
-    title: "E-commerce Marketing",
-    link: "/#EcommerceMarketing",
-  },
-  {
     title: "Web Development",
-    link: "/#WebDevelopment",
+    link: "/services/web-development",
   },
   {
     title: "Digital Marketing",
-    link: "/#DigitalMarketing",
+    link: "/services/digital-marketing",
   },
   {
     title: "Graphic Designing & Videos",
-    link: "/#GraphicDesigningVideos",
+    link: "/services/video-and-product",
   },
   {
     title: "Product Photography",
-    link: "/#ProductPhotography",
+    link: "/services/video-and-product",
   },
   {
     title: "Nykaa",
-    link: "/#Nykaa",
+    link: "/services/nykaa",
   },
   {
     title: "Jio Mart",
-    link: "/#JioMart",
+    link: "/services/jio-mart",
   },
   {
     title: "Etsy",
-    link: "/#Etsy",
+    link: "/services/etsy",
   },
   {
     title: "Walmart",
-    link: "/#Walmart",
+    link: "/services/wallmart",
   },
 ];
 const HelpLinks = [
   {
-    title: "56-57, Sheshadri Colony, Kila Maidan Road, Behind Police Petrol Pump, Indore, Madhya Pradesh 452006",
-    link: "/#add",
+    title:
+      "56-57, Sheshadri Colony, Kila Maidan Road, Behind Police Petrol Pump, Indore, Madhya Pradesh 452006",
+    link: null,
   },
   {
     title: "📞 07969087700",
@@ -51,7 +49,7 @@ const HelpLinks = [
   {
     title: "📧 care@evitamin.in (For seller enquiry)",
     link: "/#mail",
-  }
+  },
 ];
 const ResourcesLinks = [
   {
@@ -65,7 +63,7 @@ const ResourcesLinks = [
   {
     title: "Clients",
     link: "/#Clients",
-  }
+  },
 ];
 const Footer = () => {
   return (
@@ -78,8 +76,10 @@ const Footer = () => {
               AdsPerClick
             </h1>
             <p className="text-sm">
-            Helping Businesses Grow In The Digital Space! Serving top-notch
-            e-commerce marketing, digital marketing, and website design and development services that create a measurable impact and endless opportunities.{" "}
+              Helping Businesses Grow In The Digital Space! Serving top-notch
+              e-commerce marketing, digital marketing, and website design and
+              development services that create a measurable impact and endless
+              opportunities.{" "}
             </p>
             <br />
             {/* Social Handle */}
@@ -108,7 +108,11 @@ const Footer = () => {
                       key={link.title}
                       className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400 "
                     >
-                      <span>{link.title}</span>
+                      {link.link ? (
+                        <Link to={link.link}>{link.title}</Link>
+                      ) : (
+                        <span>{link.title}</span> 
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -120,21 +124,27 @@ const Footer = () => {
                   Contact Us
                 </h1>
                 <ul className="flex flex-col gap-3">
-                  {HelpLinks.map((link) => (
-                    <li
-                      key={link.title}
-                      className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400 "
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
+                  {HelpLinks.map((link) =>
+                    link.link ? (
+                      <li
+                        key={link.title}
+                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
+                      >
+                        <span>{link.title}</span>
+                      </li>
+                    ) : (
+                      <li key={link.title} className="text-gray-400">
+                        {link.title} {/* No hover effect */}
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
             <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                INFORMATION
+                  INFORMATION
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {ResourcesLinks.map((link) => (

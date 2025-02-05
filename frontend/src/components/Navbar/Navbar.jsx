@@ -50,20 +50,27 @@ const Navbar = () => {
 
   
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.stopPropagation();
     setShowMenu(!showMenu);
   };
   const handleGetClick = () =>{
     navigate("/contact-us")
+    setShowMenu(false)
   }
 
-  const handleSubmenuToggle = () => {
-    setShowSubmenu(!showSubmenu);
+  const closeMenu = () => {
+    setShowMenu(false); // Close the menu
+  };
+
+  const handleSubmenuToggle = (id) => {
+    setShowSubmenu((prev) => (prev === id ? null : id));
   };
 
   const handleClickOutside = (e) => {
     if (!e.target.closest(".submenu") && !e.target.closest(".services")) {
       setShowSubmenu(false);
+      closeMenu()
     }
   };
 
@@ -144,7 +151,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+      <ResponsiveMenu showMenu={showMenu} menuLinks = {MenuLinks} handleSubmenuToggle={handleSubmenuToggle} showSubmenu={showSubmenu} handleGetClick = {handleGetClick} closeMenu={closeMenu}/>
     </div>
   );
 };

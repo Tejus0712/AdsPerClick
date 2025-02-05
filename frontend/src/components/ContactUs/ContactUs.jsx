@@ -132,7 +132,7 @@ const ContactUs = () => {
                     placeholder="Name"
                     className="w-full  bg-opacity-40 bg-white placeholder:text-white border-gray-300 rounded-2xl focus:bg-white  focus:ring-primary focus:border-primary p-3 shadow-md"
                   />
-                  {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+                  {errors.name && <p className="text-white-500 text-sm">{errors.name}</p>}
                 </div>
 
                 {/* Phone Field */}
@@ -148,7 +148,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     placeholder="Phone"
                     className="w-full  bg-opacity-40 bg-white placeholder:text-white border-gray-300 rounded-2xl focus:bg-white  focus:ring-primary focus:border-primary p-3 shadow-md"                  />
-                  {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+                  {errors.phone && <p className="text-white-500 text-sm">{errors.phone}</p>}
                 </div>
               </div>
               <div className="flex w-full gap-2">
@@ -165,7 +165,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   placeholder="Enter your city"
                   className="w-full  bg-opacity-40 bg-white placeholder:text-white border-gray-300 rounded-2xl focus:bg-white  focus:ring-primary focus:border-primary p-3 shadow-md"                />
-                {errors.city && <p className="text-red-500 text-sm">{errors.city}</p>}
+                {errors.city && <p className="text-white-500 text-sm">{errors.city}</p>}
               </div>
 
               {/* Email Field */}
@@ -181,7 +181,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   placeholder="Enter your email"
                   className="w-full  bg-opacity-40 bg-white placeholder:text-white border-gray-300 rounded-2xl focus:bg-white  focus:ring-primary focus:border-primary p-3 shadow-md"                />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                {errors.email && <p className="text-white-500 text-sm">{errors.email}</p>}
               </div>
               </div>
 
@@ -198,7 +198,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   placeholder="Enter your subject"
                   className="w-full  bg-opacity-40 bg-white placeholder:text-white border-gray-300 rounded-2xl focus:bg-white  focus:ring-primary focus:border-primary p-3 shadow-md"                />
-                {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
+                {errors.subject && <p className="text-white-500 text-sm">{errors.subject}</p>}
               </div>
 
               {/* Message Field */}
